@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet de Compte Rendu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">Projet de Compte Rendu</div>
+      <nav class="nav">
+        <button class="nav-btn active" data-page="accueil">Accueil</button>
+        <button class="nav-btn" data-page="rapports">Rapports</button>
+        <button class="nav-btn" data-page="equipe">Équipe</button>
+        <button class="nav-btn" data-page="parametres">Paramètres</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="accueil" class="page active">
+      <div class="container hero">
+        <div class="hero-content">
+          <h1>Bienvenue sur votre site de compte rendu</h1>
+          <p>Suivez vos projets facilement avec style.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary">Commencer</a>
+            <a class="btn btn-secondary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rapports" class="page">
+      <div class="container">
+        <h1>Rapports</h1>
+        <p>Liste des rapports disponibles.</p>
+        <div class="reports-grid">
+          <div class="report-card">
+            <h3>Rapport 1</h3>
+            <p>Détails du premier rapport.</p>
+          </div>
+          <div class="report-card">
+            <h3>Rapport 2</h3>
+            <p>Détails du second rapport.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="page">
+      <div class="container">
+        <h1>Équipe</h1>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-avatar">👤</div>
+            <h3>Jean Dupont</h3>
+            <p>Développeur</p>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">👤</div>
+            <h3>Marie Curie</h3>
+            <p>Cheffe de projet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="parametres" class="page">
+      <div class="container">
+        <h1>Paramètres</h1>
+        <form class="settings-form">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Entrez votre nom" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Entrez votre email" />
+          </div>
+          <button class="btn btn-primary" type="submit">Sauvegarder</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-section">
+        <h3>Projet</h3>
+        <p>Suivi et documentation des activités du projet.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email : contact@projet.com</p>
+        <p>Téléphone : +33 1 23 45 67 89</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Projet de Compte Rendu. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
