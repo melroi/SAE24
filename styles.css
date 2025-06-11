@@ -140,6 +140,11 @@ body {
 
 /* Hero section */
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh; /* Ajuste la hauteur si besoin */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     padding: 6rem 0;
