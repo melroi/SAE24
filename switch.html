@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compte rendu projet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="/assets/image/logo.png">
+    <div class="haut">
+    <h1>Réseaux & CO</h1>
+    <p>"Votre réseau, notre expertise"</p>
+    </div>
+  </header>
+
+  <nav>
+  <ul class="menu">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="entreprise.html">Notre entreprise</a></li>
+    <li><a href="client.html">Votre entreprise</a></li>
+    <li class="dropdown">
+      <a href="#">Rapport ▼</a>
+      <ul class="submenu">
+        <li><a href="infra.html">Infrastructure</a></li>
+        <li><a href="dhcp.html">DHCP</a></li>
+        <li><a href="switch.html">Switch</a></li>
+        <li><a href="routeur.html">Routeur</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+    <main>
+    <section class="content">
+      <h2>Configuration du switch</h2>
+    </section>
+    <br>
+    <section class="content">
+      <h3>Configuration des vlans</h3>
+      <p>1ère étape : Création des vlans</p>
+      <p>On tape les commandes suivants pour créer et donner un nom aux différents vlans du réseaux :</p>
+      <p>enable => conf t => vlan 10 => name Finance </p>
+    <p>enable => conf t => vlan 20 => name RH </p>
+    <p>enable => conf t => vlan 30 => name Public </p>
+    <p>enable => conf t => vlan 40 => name Admin</p>
+    <br>
+    <p>2ème étape : Configuration des ports</p>
+    <p>Pour assigner les ports à chaque vlans du réseau on tape les commandes suivants :</p>
+    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p>Pour le vlan finance (port 1 à 10):</p>
+    <p>Exemple pour le port 1:</p>
+    <p>interface GigabitEthernet1/0/1</p>
+    <p>switchport mode access</p>
+    <p>switchport access vlan 10</p>
+    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p>Pour le vlan RH (port 11 à 20)</p>
+    <p>Exemple pour le port 11:</p>
+    <p>interface GigabitEthernet1/0/11</p>
+    <p>switchport mode access</p>
+    <p>switchport access vlan 20</p>
+    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p>Pour le vlan Admin (port 21 et 22)</p>
+    <p>Exemple pour le port 21:</p>
+    <p>interface GigabitEthernet1/0/21</p>
+    <p>switchport mode access</p>
+    <p>switchport access vlan 40</p>
+    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p>Pour le vlan Public (port 23) :</p>
+    <p>interface GigabitEthernet1/0/23</p>
+    <p>switchport mode access</p>
+    <p>switchport access vlan 30</p>
+    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+    <p>Pour le trunk vers le routeur (port 24) :</p>
+    <p>interface GigabitEthernet1/0/24</p>
+    <p>switchport mode trunk</p>
+    </section>
+    <br>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Réseaux & CO. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
